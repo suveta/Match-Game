@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module minimax_fic</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>minimax_fic</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/hp/Documents/L3S2/IA/Projet_IA_V5/Projet_IA_Allumettes/minimax_fic.py">/home/hp/Documents/L3S2/IA/Projet_IA_V5/Projet_IA_Allumettes/minimax_fic.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;fri&nbsp;Apr&nbsp;&nbsp;15&nbsp;17:35:28&nbsp;2022<br>
+&nbsp;<br>
+@author:&nbsp;ANANDARAJ&nbsp;Suvéta<br>
+@author:&nbsp;ADOTRI&nbsp;Frimpong<br>
+&nbsp;<br>
+Ce&nbsp;module&nbsp;regroupe&nbsp;une&nbsp;classe&nbsp;et&nbsp;une&nbsp;fonction&nbsp;qui&nbsp;permettent&nbsp;le&nbsp;bon&nbsp;fonctionnement&nbsp;de&nbsp;l'algorithme<br>
+Minimax</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="minimax_fic.html#Coup">Coup</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Coup">class <strong>Coup</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Coup">Coup</a>(_Coup__valeur:&nbsp;int,&nbsp;_Coup__heuristic:&nbsp;int&nbsp;=&nbsp;0)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+<a href="#Coup">Coup</a>(_Coup__valeur:&nbsp;int,&nbsp;_Coup__heuristic:&nbsp;int&nbsp;=&nbsp;0)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Coup-__eq__"><strong>__eq__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="Coup-__init__"><strong>__init__</strong></a>(self, _Coup__valeur: int, _Coup__heuristic: int = 0) -&gt; None</dt></dl>
+
+<dl><dt><a name="Coup-__repr__"><strong>__repr__</strong></a>(self)</dt><dd><tt>Fonction&nbsp;de&nbsp;représentation&nbsp;d'un&nbsp;objet&nbsp;de&nbsp;class&nbsp;&lt;&lt;&nbsp;<a href="#Coup">Coup</a>&nbsp;&gt;&gt;<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;DESCRIPTION.&nbsp;Objet&nbsp;de&nbsp;classe&nbsp;&lt;&lt;&nbsp;<a href="#Coup">Coup</a>&nbsp;&gt;&gt;&nbsp;sous&nbsp;forme&nbsp;de&nbsp;chaîne&nbsp;de&nbsp;caractères</tt></dd></dl>
+
+<dl><dt><a name="Coup-getHeuristic"><strong>getHeuristic</strong></a>(self) -&gt; int</dt><dd><tt>Fonction&nbsp;de&nbsp;récupération&nbsp;de&nbsp;l'heuristique&nbsp;du&nbsp;coup&nbsp;joué&nbsp;<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;DESCRIPTION.&nbsp;Valeur&nbsp;de&nbsp;l'heuristique&nbsp;(évaluation)&nbsp;du&nbsp;coup&nbsp;de&nbsp;l'utilisateur</tt></dd></dl>
+
+<dl><dt><a name="Coup-getValeur"><strong>getValeur</strong></a>(self) -&gt; int</dt><dd><tt>Fonction&nbsp;de&nbsp;récupération&nbsp;de&nbsp;la&nbsp;valeur&nbsp;du&nbsp;coup&nbsp;joué&nbsp;<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;DESCRIPTION.&nbsp;Valeur&nbsp;du&nbsp;coup&nbsp;joué&nbsp;par&nbsp;l'utilisateur</tt></dd></dl>
+
+<dl><dt><a name="Coup-setHeuristic"><strong>setHeuristic</strong></a>(self, valeur_heuristic: int) -&gt; None</dt><dd><tt>Fonction&nbsp;d'affectation&nbsp;de&nbsp;l'heuristique&nbsp;du&nbsp;coup&nbsp;joué&nbsp;<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+valeur_heuristic&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;DESCRIPTION.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None<br>
+&nbsp;&nbsp;&nbsp;&nbsp;DESCRIPTION.&nbsp;Nouvelle&nbsp;valeur&nbsp;de&nbsp;l'heuristique&nbsp;(évaluation)&nbsp;du&nbsp;coup&nbsp;de&nbsp;l'utilisateur</tt></dd></dl>
+
+<dl><dt><a name="Coup-setValeur"><strong>setValeur</strong></a>(self, nouvelle_valeur: int) -&gt; None</dt><dd><tt>Fonction&nbsp;d'affectation&nbsp;de&nbsp;la&nbsp;valeur&nbsp;du&nbsp;coup&nbsp;joué&nbsp;<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+nouvelle_valeur&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;DESCRIPTION.&nbsp;Nouvelle&nbsp;valeur&nbsp;du&nbsp;coup&nbsp;de&nbsp;l'utilisateur<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None<br>
+&nbsp;&nbsp;&nbsp;&nbsp;DESCRIPTION.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__annotations__</strong> = {'_Coup__heuristic': &lt;class 'int'&gt;, '_Coup__valeur': &lt;class 'int'&gt;}</dl>
+
+<dl><dt><strong>__dataclass_fields__</strong> = {'_Coup__heuristic': Field(name='_Coup__heuristic',type=&lt;class 'int'&gt;...rue,metadata=mappingproxy({}),_field_type=_FIELD), '_Coup__valeur': Field(name='_Coup__valeur',type=&lt;class 'int'&gt;,de...rue,metadata=mappingproxy({}),_field_type=_FIELD)}</dl>
+
+<dl><dt><strong>__dataclass_params__</strong> = _DataclassParams(init=True,repr=True,eq=True,order=False,unsafe_hash=False,frozen=False)</dl>
+
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><strong>evaluer</strong> <em>lambda</em> valeur, maxi</dt></dl>
+ <dl><dt><a name="-minmax"><strong>minmax</strong></a>(situation: list, maxi: bool, profondeur: int, coups_impaire: set, coups_paire: set) -&gt; int</dt><dd><tt>&nbsp;&nbsp;fonction&nbsp;effectuant&nbsp;l'algorithme&nbsp;minimax<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+situation&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;liste&nbsp;contenant&nbsp;les&nbsp;informations&nbsp;du&nbsp;jeu&nbsp;actuel<br>
+maxi&nbsp;:&nbsp;boolean<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;&lt;&nbsp;true&nbsp;&gt;&gt;&nbsp;si&nbsp;le&nbsp;joueur&nbsp;qui&nbsp;joue&nbsp;est&nbsp;max,&nbsp;&lt;&lt;&nbsp;false&nbsp;&gt;&gt;&nbsp;sinon<br>
+profondeur&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;indique&nbsp;la&nbsp;profondeur&nbsp;de&nbsp;l'arbre&nbsp;de&nbsp;recherche<br>
+coups_impaire&nbsp;:&nbsp;set<br>
+&nbsp;&nbsp;&nbsp;ensemble&nbsp;des&nbsp;coups&nbsp;impaires&nbsp;possibles<br>
+coups_paire&nbsp;:&nbsp;set<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ensemble&nbsp;des&nbsp;coups&nbsp;paires&nbsp;possibles<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;DESCRIPTION.&nbsp;Valeur&nbsp;du&nbsp;coup&nbsp;le&nbsp;plus&nbsp;optimal&nbsp;pour&nbsp;gagner&nbsp;par&nbsp;rapport&nbsp;à&nbsp;la&nbsp;profondeur&nbsp;fixée</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>Callable</strong> = typing.Callable<br>
+<strong>__annotations__</strong> = {'evaluer': typing.Callable[[int, bool], int]}</td></tr></table>
+</body></html>
